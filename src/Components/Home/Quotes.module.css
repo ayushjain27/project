@@ -1,0 +1,85 @@
+* {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerFluid {
+  background-color: #0c1022;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+  background-color: rgb(0, 0, 0, 0.75);
+  width: 800px;
+  height: 250px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  width: 1000px;
+  height: 350px;
+  background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  width: 1000px;
+  height: 250px;
+  background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+  animation: animate 4s linear infinite;
+}
+
+
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.span{
+  position: absolute;
+  inset: 5px;
+  border-radius: 16px;
+  background: #0c1022;
+  z-index: 1;
+}
+
+.text{
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 2em;
+}
+
+.JoinContainer {
+  background-color: lightgrey;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Join {
+  background-color: #0a0a0e;
+  border-radius: 12px;
+  padding: 2px 16px;
+  color: white;
+}

@@ -1,0 +1,20 @@
+* {
+  overflow-x: hidden;
+}
+
+.style {
+  display: flex;
+  justify-content: center;
+  background-color: lightgray;
+  word-spacing: 12px;
+}
+
+.style1 {
+  color: white;
+  margin-left: 5px;
+}
+
+.style2 {
+  color: red;
+  margin-left: 5px;
+}

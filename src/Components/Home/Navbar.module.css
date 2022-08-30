@@ -1,0 +1,19 @@
+*{
+    overflow-x: hidden;
+}
+
+.nav{
+    width: 100%;
+    height: 60px;
+    background-color: #0a0a0e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px;
+}
+
+.logo{
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+}

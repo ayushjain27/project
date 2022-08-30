@@ -1,0 +1,56 @@
+* {
+  overflow-x: hidden;
+}
+
+.row{
+    padding: 15px;
+}
+
+.col{
+    margin: 12px 0px;
+}
+
+.DonateContainer {
+  height: 100px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding: 0px auto;
+}
+
+.sentence {
+  word-spacing: 2px;
+  font-size: 20px;
+  /* text-align: center; */
+  /* font-weight: bold; */
+}
+
+.DonateBoxContainer {
+  background-color: #0c1022;
+  /* background-color: lightyellow; */
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.cards{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 0px;
+    background-color: cornsilk;
+    border: none; 
+}
+
+.card{
+    padding: 0px;
+}
+
+.title{
+    background-color: #0a0a0e;;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
