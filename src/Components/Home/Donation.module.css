@@ -21,13 +21,12 @@
 .sentence {
   word-spacing: 2px;
   font-size: 20px;
-  /* text-align: center; */
-  /* font-weight: bold; */
+  /* text-align: center;
+  font-weight: bold; */
 }
 
 .DonateBoxContainer {
-  background-color: #0c1022;
-  /* background-color: lightyellow; */
+  background-color: lightyellow;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }

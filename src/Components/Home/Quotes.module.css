@@ -65,7 +65,8 @@
   position: relative;
   z-index: 2;
   color: #fff;
-  font-size: 2em;
+  /* font-size: 2em; */
+  padding: 12px;
 }
 
 .JoinContainer {
