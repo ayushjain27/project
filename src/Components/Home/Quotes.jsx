@@ -11,7 +11,7 @@ const Quotes = () => {
               <p className={styles.text}>Ayush</p>
             </div>
         </div>
-        <div className={styles.JoinContainer}>
+        <div className={`${styles.JoinContainer} d-flex justify-content-center align-items-center w-100`}>
             <div className={styles.Join}>Join Us/Register</div>
         </div>
     </>

@@ -18,12 +18,12 @@ const Modal = () => {
           aria-hidden="true"
         >
           <div className="modal-dialog">
-            <div className={`${styles.modal} modal-content`}>
+            <div className={`${styles.modal} modal-content text-white`}>
               <div className={`${styles.modalHeader} modal-header`}>
-                <div className={styles.header}>
+                <div className="d-flex flex-column">
                   <img className={styles.img} src="./images/Logo.png" alt="" />
-                  <div className={styles.desc}>
-                    <h className={styles.name}>Avak</h>
+                  <div className={`${styles.desc} d-flex flex-column justify-content-center`}>
+                    <h className={`${styles.name} d-flex align-items-center`}>Avak</h>
                     <p>avakinternational@gmail.com</p>
                   </div>
                 </div>

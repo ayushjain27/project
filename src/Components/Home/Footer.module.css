@@ -9,12 +9,7 @@
 .box{
     background-color: #0a0a0e;
     padding: 6px 12px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: 600;
-    text-align: center;
 }
 
 @media screen and (max-width: 768px){ 

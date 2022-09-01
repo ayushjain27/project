@@ -11,12 +11,6 @@
     padding: 12px;
     border-top-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
     height: 100px;
     font-size: 1rem;
-    text-align: center;
 }

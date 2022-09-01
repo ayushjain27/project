@@ -11,13 +11,13 @@ const Carousel = () => {
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" className={styles.button} aria-label="Slide 3"></button>
                 </div>
                 <div className="carousel-inner">
-                    <div  className={`${styles.carouselItem} carousel-item active`} data-bs-interval="2000">
+                    <div  className={`${styles.carouselItem} carousel-item active w-100`} data-bs-interval="2000">
                         <img src="https://img.freepik.com/free-vector/people-carrying-donation-charity-related-icons_53876-43091.jpg?w=2000" className={`${styles.img} d-block w-100 h-100`} alt="..." />
                     </div>
-                    <div className={`${styles.carouselItem} carousel-item`} data-bs-interval="2000">
+                    <div className={`${styles.carouselItem} carousel-item active w-100`} data-bs-interval="2000">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVRkGDxnBEtn6sXa_91FjhiZff9eFS5hx7-g&usqp=CAU" className={`${styles.img} d-block w-100`} alt="..." />
                     </div>
-                    <div className={`${styles.carouselItem} carousel-item`}>
+                    <div className={`${styles.carouselItem} carousel-item active w-100`}>
                         <img src="https://www.gannett-cdn.com/-mm-/3b8b0abcb585d9841e5193c3d072eed1e5ce62bc/c=0-30-580-356/local/-/media/2017/10/05/USATODAY/usatsports/glass-jar-full-of-cois-with-donate-written-on-it-charity-donation-philanthropy_large.jpg?width=1200&disable=upscale&format=pjpg&auto=webp" className={`${styles.img} d-block w-100`} alt="..." />
                     </div>
                 </div>

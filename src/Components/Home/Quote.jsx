@@ -4,7 +4,7 @@ import styles from './Quote.module.css'
 const Quote = () => {
 
     return (
-        <div className={styles.style}>
+        <div className={`${styles.style} d-flex justify-content-center`}>
             <span className={styles.style1}>A</span>
             <span className={styles.style2}>STEP</span>
             <span className={styles.style1}>TO</span>
