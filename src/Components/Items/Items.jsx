@@ -12,7 +12,7 @@ const Items = () => {
         </div>
         <div className="row">
           <div className="col-md-6">Books</div>
-          <div className="col-md-6">Money</div>
+          <div className="col-md-6">Money Deposit</div>
         </div>
       </div>
     </>
