@@ -29,31 +29,31 @@ const Sidebar = () => {
                 <li>
                     <a href="#">
                         <span className={styles.icon}><ion-icon name="logo-apple"></ion-icon></span>
-                        <span className={styles.title}>Brand Name</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span className={styles.icon}><ion-icon name="home-outline"></ion-icon></span>
                         <span className={styles.title}>Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
+                        <span className={styles.icon}><ion-icon name="home-outline"></ion-icon></span>
+                        <span className={styles.title}>Footwear</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
                         <span className={styles.icon}><ion-icon name="person-outline"></ion-icon></span>
-                        <span className={styles.title}>Customers</span>
+                        <span className={styles.title}>Clothes</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span className={styles.icon}><ion-icon name="chatbubble-outline"></ion-icon></span>
-                        <span className={styles.title}>Messages</span>
+                        <span className={styles.title}>Books</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span className={styles.icon}><ion-icon name="help-outline"></ion-icon></span>
-                        <span className={styles.title}>Help</span>
+                        <span className={styles.title}>Money Deposit</span>
                     </a>
                 </li>
                 <li>
