@@ -122,7 +122,7 @@ const Images = () => {
                 <button
                   onClick={handleSubmit}
                   disabled={
-                    imag.title.length < 4 || imag.description.length < 10 || imag.text !== "Select NGO..."
+                    imag.title.length < 4 || imag.description.length < 10 || imag.text == "Select NGO..."
                   }
                   className={`${styles.button} btn btn-warning my-3`}
                   type="submit"
