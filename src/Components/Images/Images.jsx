@@ -30,7 +30,7 @@ const Images = () => {
   return (
     <>
       <div className={`${styles.container} container my-3 rounded`}>
-        <div className={`${styles.row} row`}>
+        <div className="row">
           <div className={`${styles.col1} col-md-6`}>
             <div className={styles.first}>
               {!imageUrl && !selectedImage && (
