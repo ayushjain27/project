@@ -2,20 +2,20 @@ import React, { useState, useEffect } from "react";
 import styles from "./Images.module.css";
 
 const Images = () => {
-  const [text, setText] = useState("Select NGO...");
+  // const [text, setText] = useState("Select NGO...");
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
-  const [imag, setImag] = useState({ title: "", description: "" });
+  const [imag, setImag] = useState({ title: "", description: "", text: "SELECT NGO..." });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setImag({ title: "", description: "" });
+    setImag({ title: "", description: "", text: "SELECT NGO..." });
     console.log("clicked");
   };
 
-  const handleOnChange = (event) => {
-    setText(event.target.value);
-  }
+  // const handleOnChange = (event) => {
+  //   setText(event.target.value);
+  // }
 
   const onChange = (e) => {
     setImag({ ...imag, [e.target.name]: e.target.value });
@@ -106,8 +106,9 @@ const Images = () => {
                   </div>
                   <select
                     className="form-select"
-                    onChange={handleOnChange}
-                    value={text}
+                    onChange={onChange}
+                    name="text"
+                    value={imag.text}
                     id="contentRated"
                     aria-label="Default select example"
                   >
@@ -121,7 +122,7 @@ const Images = () => {
                 <button
                   onClick={handleSubmit}
                   disabled={
-                    imag.title.length < 4 || imag.description.length < 10 || {text} === "Select NGO..."
+                    imag.title.length < 4 || imag.description.length < 10 || imag.text !== "Select NGO..."
                   }
                   className={`${styles.button} btn btn-warning my-3`}
                   type="submit"
