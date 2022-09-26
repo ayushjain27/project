@@ -12,7 +12,7 @@ const Items = () => {
               <h3 className="p-1">Footwear</h3>
             </div>
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
-              <h3 className="p-1">Footwear</h3>
+              <p className="p-1">Footwear</p>
             </div>
           </div>
           <div className="col-md-6 p-2">
@@ -20,7 +20,7 @@ const Items = () => {
               <h3 className="p-1">Clothes</h3>
             </div>
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
-              <h3 className="p-1">Clothes</h3>
+              <p className="p-1">Clothes</p>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@ const Items = () => {
               <h3 className="p-1">Books</h3>
             </div>
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
-              <h3 className="p-1">Books</h3>
+              <p className="p-1">Books</p>
             </div>
           </div>
           <div className="col-md-6 p-2">
@@ -38,7 +38,7 @@ const Items = () => {
               <h3 className="p-1">Money Deposit</h3>
             </div>
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
-              <h3 className="p-1">Money Deposit</h3>
+              <p className="p-1">Money Deposit</p>
             </div>
           </div>
         </div>
