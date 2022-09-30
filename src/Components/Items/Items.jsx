@@ -12,9 +12,9 @@ const Items = () => {
               <h3 className="p-1">Footwear</h3>
             </div>
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
-              <div className="row p-1" style={{backgroundColor: 'red'}}>
-                <div className="col-12 p-1" style={{backgroundColor: 'green'}}>
-                    Footwear
+              <div className="row p-1" style={{ backgroundColor: 'red' }}>
+                <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
+                  Footwear
                 </div>
               </div>
             </div>
@@ -24,7 +24,11 @@ const Items = () => {
               <h3 className="p-1">Clothes</h3>
             </div>
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
-              <h3 className="p-1">Clothes</h3>
+              <div className="row p-1" style={{ backgroundColor: 'red' }}>
+                <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
+                  Clothes
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -34,7 +38,11 @@ const Items = () => {
               <h3 className="p-1">Books</h3>
             </div>
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
-              <h3 className="p-1">Books</h3>
+              <div className="row p-1" style={{ backgroundColor: 'red' }}>
+                <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
+                  Books
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-md-6 p-2">
@@ -42,7 +50,11 @@ const Items = () => {
               <h3 className="p-1">Money Deposit</h3>
             </div>
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
-              <h3 className="p-1">Money Deposit</h3>
+              <div className="row p-1" style={{ backgroundColor: 'red' }}>
+                <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
+                  Money Deposit
+                </div>
+              </div>
             </div>
           </div>
         </div>
