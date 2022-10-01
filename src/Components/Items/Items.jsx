@@ -14,7 +14,7 @@ const Items = () => {
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
               <div className="row p-1" style={{ backgroundColor: 'red' }}>
                 <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
-                  Footwear
+                    Footwear
                 </div>
               </div>
             </div>
@@ -26,7 +26,7 @@ const Items = () => {
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
               <div className="row p-1" style={{ backgroundColor: 'red' }}>
                 <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
-                  Clothes
+                    Clothes
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Items = () => {
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
               <div className="row p-1" style={{ backgroundColor: 'red' }}>
                 <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
-                  Books
+                    Books
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@ const Items = () => {
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
               <div className="row p-1" style={{ backgroundColor: 'red' }}>
                 <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
-                  Money Deposit
+                    Money Deposit
                 </div>
               </div>
             </div>
