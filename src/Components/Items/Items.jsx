@@ -13,7 +13,7 @@ const Items = () => {
             </div>
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
               <div className="row mt-1 p-1" style={{ backgroundColor: 'yellow' }}>
-                <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
+                <div className="col-12 p-1" style={{ backgroundColor: 'red' }}>
                     Footwear
                 </div>
               </div>
