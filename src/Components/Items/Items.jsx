@@ -14,11 +14,11 @@ const Items = () => {
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
               <div className="row mt-1 p-1" style={{ backgroundColor: 'yellow' }}>
                 <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
-                    <div className="row">
-                      <div className="col-3">A</div>
-                      <div className="col-6">B</div>
-                      <div className="col-3">C</div>
-                    </div>
+                  <div className="row">
+                    <div className="col-3">A</div>
+                    <div className="col-6">B</div>
+                    <div className="col-3">C</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -30,11 +30,11 @@ const Items = () => {
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
               <div className="row mt-1 p-1" style={{ backgroundColor: 'yellow' }}>
                 <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
-                <div className="row">
-                      <div className="col-3">A</div>
-                      <div className="col-6">B</div>
-                      <div className="col-3">C</div>
-                    </div>
+                  <div className="row">
+                    <div className="col-3">A</div>
+                    <div className="col-6">B</div>
+                    <div className="col-3">C</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -48,7 +48,11 @@ const Items = () => {
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
               <div className="row mt-1 p-1" style={{ backgroundColor: 'yellow' }}>
                 <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
-                    Books
+                  <div className="row">
+                    <div className="col-3">A</div>
+                    <div className="col-6">B</div>
+                    <div className="col-3">C</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -60,7 +64,7 @@ const Items = () => {
             <div className={`${styles.entries} box w-100 btn btn-danger`}>
               <div className="row mt-1 p-1" style={{ backgroundColor: 'yellow' }}>
                 <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
-                    Money Deposit
+                  Money Deposit
                 </div>
               </div>
             </div>
