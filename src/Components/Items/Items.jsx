@@ -15,7 +15,7 @@ const Items = () => {
               <div className="row mt-1 p-1" style={{ backgroundColor: 'yellow' }}>
                 <div className="col-12 p-1" style={{ backgroundColor: 'green' }}>
                   <div className="row">
-                    <div className="col-3 p-2">A</div>
+                    <div className="col-3">A</div>
                     <div className="col-6">B</div>
                     <div className="col-3">C</div>
                   </div>
