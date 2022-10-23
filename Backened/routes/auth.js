@@ -20,7 +20,6 @@ router.post('/', [
     }).then(user=>res.json(user))
     .catch(err=>{console.log(err)
     res.json({error: 'Please enter a unique value for email', message: err.message})});
-    // res.send(req.body);
 })
 
 module.exports = router;
