@@ -7,4 +7,4 @@ const connectToMongo = () =>{
     });
 }
 
-module.export = connectToMongo;
+module.exports = connectToMongo;
