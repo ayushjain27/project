@@ -18,7 +18,7 @@ const Login = () => {
                                 <h3 className='text-warning'>Login</h3>
                                 <hr style={{ color: "#ffc107", borderTop: "2px solid", opacity: "1" }} />
                                 <h5 className="card-title text-center mt-5">
-                                    Welcome to Talent  <span className='bg-warning p-2'>Sumo</span>
+                                    Welcome to Donation  <span className='bg-warning p-2'>Camp</span>
                                 </h5>
                                 <p className='text-center mt-3 mb-5'>Enter your details and start journey with us.</p>
                                 <form>
