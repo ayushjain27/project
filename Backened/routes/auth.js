@@ -12,7 +12,7 @@ const JWT_SECRET = 'Donationsforhelpingp$eople';
 router.post('/createuser', [
     body('name', 'Name must be atleast 5 characters').isLength({ min: 5 }),
     body('email', 'Enter a valid email').isEmail(),
-    body('password', 'Password must be atleast 5 characters').isLength({ min: 5 }),
+    body('password', 'Password must be atleast 5 characters').exists(),
 ], async (req, res) => {
     // if there are errors, return Bad request and the errors
     const errors = validationResult(req);
