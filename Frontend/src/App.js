@@ -8,6 +8,7 @@ import Home from './Components/Home/Home';
 import Images from './Components/Images/Images';
 import Items from './Components/Items/Items';
 import Login from './Components/Login/Login';
+import SignUp from './Components/SignUp/SignUp';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/images' element={<Images />} />
           <Route exact path='/itemsbox' element={<Items />} />
           <Route exact path='/Login' element={<Login />} />
+          <Route exact path='/SignUp' element={<SignUp />} />
         </Routes>
       </Router>
     </>

@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './Login.module.css';
 import { useNavigate } from 'react-router-dom';
 
-/* import login from '../../assets/Images/login.svg'; */
-
 import { CgLogIn } from 'react-icons/cg';
 
 const Login = () => {
