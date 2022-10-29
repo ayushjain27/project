@@ -201,7 +201,7 @@ const Images = () => {
                         </div>
                         <div className="row">
                           <div className="col-12">
-                            <div className="mb-2">
+                            <div className="my-2">
                               <div className="d-grid ms-auto">
                                 <button type="submit" className="btn btn-dark button" onSubmit={onSubmit}>Submit and Continue</button>
                               </div>
