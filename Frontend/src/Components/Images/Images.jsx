@@ -8,28 +8,63 @@ import styles from "./Images.module.css";
 // import FormControl from '@mui/material/FormControl';
 // import Select, { SelectChangeEvent } from '@mui/material/Select';
 
+import { Formik, Form, Field } from "formik";
+
 const Images = () => {
+  const initialValues = {
+    title: "",
+    description: "",
+    ngolink: ""
+  }
+
+  const validateTitle = (value) => {
+    let error;
+    if (!value) {
+      error = "*This field is required";
+    } else if (value.length < 5) {
+      error = "*It must be greater than 5";
+    }
+    return error;
+  }
+
+  const validateDescription = (value) => {
+    let error;
+    if (!value) {
+      error = "*This field is required";
+    } else if (value.length < 10) {
+      error = "*It must be greater than 10";
+    }
+    return error;
+  }
+
+  const validateNgolink = (value) => {
+    let error;
+    if (!value) {
+      error = "*This field is required"
+    } else if (value === "Select NGO...") {
+      error = "*Choose correct option"
+    }
+    return error;
+  }
+
   // const [text, setText] = useState("Select NGO...");
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
-  const [imag, setImag] = useState({ title: "", description: "", text: "" });
+  // const [imag, setImag] = useState({ title: "", description: "", text: "" });
 
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    setImag({ title: "", description: "", text: "" });
+    // setImag({ title: "", description: "", text: "" });
     console.log("clicked");
-    console.log(imag.title);
-    console.log(imag.description);
-    console.log(imag.text);
   };
 
   // const handleOnChange = (event) => {
   //   setText(event.target.value);
   // }
 
-  const onChange = (e) => {
-    setImag({ ...imag, [e.target.name]: e.target.value });
-  };
+  // const onChange = (e) => {
+  //   setImag({ ...imag, [e.target.name]: e.target.value });
+  // };
 
   useEffect(() => {
     if (selectedImage) {
@@ -81,7 +116,7 @@ const Images = () => {
               <div className="my-3">
                 <div className={`${styles.heading} my-3`}>Your info</div>
                 <div className="my-3">
-                    {/* <Box
+                  {/* <Box
                       component="form"
                       sx={{
                         '& > :not(style)': { m: 1, width: '25ch' },
@@ -91,7 +126,93 @@ const Images = () => {
                       >
                       <TextField id="outlined-basic" label="Enter title" variant="outlined" name="title" value={imag.title} onChange={onChange}/>
                     </Box> */}
-                  <input
+                  <Formik
+                    initialValues={initialValues}
+                    onSubmit={onSubmit}
+                  >
+                    {({ errors, touched }) => (
+                      <Form className="p-3">
+                        <div className="row">
+                          <div className="col-12">
+                            <div className="mb-2">
+                              <label className="form-label fw-bold">Enter Title*</label>
+                              <Field
+                                type="text"
+                                className={`form-control ${errors.title && touched.title ? "border-danger" : ""}`}
+                                placeholder='Enter title'
+                                id="tite"
+                                name="title"
+                                validate={validateTitle}
+                              />
+                              {errors.title && touched.title &&
+                                <div className='form-text text-danger'>
+                                  {errors.title}
+                                </div>
+                              }
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-12">
+                            <div className="mb-2">
+                              <label className="form-label fw-bold">Description</label>
+                              <Field as="textarea"
+                                className={`form-control ${errors.description && touched.description ? "border-danger" : ""}`}
+                                rows="5"
+                                placeholder='Your description'
+                                id="description"
+                                name="description"
+                                validate={validateDescription}
+                              />
+                              {
+                                errors.description && touched.description &&
+                                <div className="form-text text-danger">
+                                  {errors.description}
+                                </div>
+                              }
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-12">
+                            <div className="mb-2">
+                              <label className="form-label fw-bold">NGO Link</label>
+                              <Field as="select"
+                                className={`form-select ${errors.ngolink && touched.ngolink ? "border-danger" : ""}`}
+                                id='ngolink'
+                                name='ngolink'
+                                validate={validateNgolink}
+                              >
+                                <option value="Select NGO...">Select NGO...</option>
+                                <option value="Sales">One</option>
+                                <option value="Service">Two</option>
+                                <option value="HR">Three</option>
+                                <option value="New Grad.">Four</option>
+                                <option value="None / Others">Others</option>
+                              </Field>
+                              {
+                                errors.ngolink && touched.ngolink &&
+                                <div className="form-text text-danger">
+                                  {errors.ngolink}
+                                </div>
+                              }
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-12">
+                            <div className="mb-2">
+                              <div className="d-grid ms-auto">
+                                <button type="submit" className="btn btn-dark button" onSubmit={onSubmit}>Submit and Continue</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </Form>
+                    )}
+                  </Formik>
+
+                  {/* <input
                     type="text"
                     id="title"
                     name="title"
@@ -105,9 +226,9 @@ const Images = () => {
                   />
                   <div id="title" className="form-text">
                     Your title must be atleast 4 characters long
-                  </div>
+                  </div> */}
                 </div>
-                  {/* <Box
+                {/* <Box
                     component="form"
                     sx={{
                       '& .MuiTextField-root': { m: 1, width: '25ch' },
@@ -127,7 +248,7 @@ const Images = () => {
                       />
                       </div>
                   </Box> */}
-                <div>
+                {/* <div>
                   <textarea
                     rows={5}
                     type="text"
@@ -157,8 +278,8 @@ const Images = () => {
                     <option>Two</option>
                     <option>Three</option>
                     <option>Four</option>
-                  </select>
-                  {/* <Box sx={{ minWidth: 120 }}>
+                  </select> */}
+                {/* <Box sx={{ minWidth: 120 }}>
                     <FormControl fullWidth>
                       <InputLabel id="demo-simple-select-label">SELECT NGO...</InputLabel>
                       <Select
@@ -176,8 +297,8 @@ const Images = () => {
                       </Select>
                     </FormControl>
                   </Box> */}
-                </div>
-                <button
+                {/* </div> */}
+                {/* <button
                   onClick={handleSubmit}
                   disabled={
                     imag.title.length < 4 || imag.description.length < 10 || imag.text == ""
@@ -186,7 +307,7 @@ const Images = () => {
                   type="submit"
                 >
                   Submit
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
