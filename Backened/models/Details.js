@@ -16,7 +16,10 @@ const DetailsSchema = new Schema({
     },
     ngo_link:{
         type: String,
-        // enum: ['KG', 'liters', 'meters', 'cm'],
+        required : true 
+    },
+    image:{
+        type: String,
         required : true 
     },
     date:{
