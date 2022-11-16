@@ -15,8 +15,8 @@ router.get('/fetchalldetails', fetchuser, async (req, res) => {
     }
 })
 
-// ROUTE 2:  Add a new Detail using: POST "/api/details/adddetail/clothes". login required
-router.post('/adddetail/clothes', fetchuser, [
+// ROUTE 2:  Add a new Detail using: POST "/api/details/adddetail". login required
+router.post('/adddetail', fetchuser, [
     body('title', 'Title must be atleast 5 characters').isLength({ min: 5 }),
     body('description', 'Description must be atleast 10 characters').isLength({ min: 10 }),
 ], async (req, res) => {
@@ -28,55 +28,7 @@ router.post('/adddetail/clothes', fetchuser, [
             return res.status(400).json({ errors: errors.array() });
         }
         const detail = new Detail({
-            title, description, ngo_link, image, category: "clothes", user: req.user.id
-        })
-        const savedDetail = await detail.save();
-        res.json(savedDetail);
-
-    } catch (error) {
-        console.error(error.message);
-        res.status(500).send("Internal Server Error");
-    }
-})
-
-// ROUTE 2:  Add a new Detail using: POST "/api/details/adddetail/footwear". login required
-router.post('/adddetail/footwear', fetchuser, [
-    body('title', 'Title must be atleast 5 characters').isLength({ min: 5 }),
-    body('description', 'Description must be atleast 10 characters').isLength({ min: 10 }),
-], async (req, res) => {
-    try {
-        const { title, description, ngo_link, image} = req.body;
-        // if there are errors, return Bad request and the errors
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({ errors: errors.array() });
-        }
-        const detail = new Detail({
-            title, description, ngo_link, image, category: "footwear", user: req.user.id
-        })
-        const savedDetail = await detail.save();
-        res.json(savedDetail);
-
-    } catch (error) {
-        console.error(error.message);
-        res.status(500).send("Internal Server Error");
-    }
-})
-
-// ROUTE 3:  Add a new Detail using: POST "/api/details/adddetail/books". login required
-router.post('/adddetail/books', fetchuser, [
-    body('title', 'Title must be atleast 5 characters').isLength({ min: 5 }),
-    body('description', 'Description must be atleast 10 characters').isLength({ min: 10 }),
-], async (req, res) => {
-    try {
-        const { title, description, ngo_link, image } = req.body;
-        // if there are errors, return Bad request and the errors
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({ errors: errors.array() });
-        }
-        const detail = new Detail({
-            title, description, ngo_link, image, category: "books", user: req.user.id
+            title, description, ngo_link, image, user: req.user.id
         })
         const savedDetail = await detail.save();
         res.json(savedDetail);
