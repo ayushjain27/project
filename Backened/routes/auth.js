@@ -90,11 +90,12 @@ router.post('/login', [
 })
 
 // ROUTE3: Get loggedin User using: POST "/api/auth/getuser". Login required
-router.post('/getuser', fetchuser ,async (req,res)=>{
+router.get('/getuser', fetchuser ,async (req,res)=>{
     try{
         userId = req.user.id;
         const user = await User.findById(userId).select("-password");
-        res.send(user);
+        res.json(user);
+        // res.send(user);
     }catch(error){
         console.log(error.mesage);
         res.status(500).send("Internal Server Error");
