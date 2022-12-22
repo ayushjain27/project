@@ -17,7 +17,7 @@ const rows = [
     0,
     '16 Mar, 2019',
     'Elvis Presley',
-    'Tupelo, MS',
+    'Tupelo, MS', 
     'VISA ⠀•••• 3719',
     312.44,
   ),
