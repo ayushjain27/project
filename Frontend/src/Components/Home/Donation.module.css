@@ -4,6 +4,9 @@
 
 .row{
     padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .col{

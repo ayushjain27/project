@@ -4,12 +4,14 @@ import Quotes from "./Quotes";
 import Donation from "./Donation";
 import Shoutout from "./Shoutout";
 import Footer from "./Footer";
+import Testimaonials from "./Testimaonials";
 
 const Home = () => {
   return (
     <>
-      <Carousel />
+     <div style={{width:'100%'}}> <Carousel /></div>
       <Quotes />
+      <Testimaonials />
       <Donation />
       <Shoutout />
       <Footer />
