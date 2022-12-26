@@ -9,10 +9,10 @@ import Testimaonials from "./Testimaonials";
 const Home = () => {
   return (
     <>
-     <div style={{width:'100%'}}> <Carousel /></div>
+     <div style={{width:'100%',backgroundColor:'black'}}> <Carousel /></div>
       <Quotes />
-      <Testimaonials />
       <Donation />
+      <Testimaonials />
       <Shoutout />
       <Footer />
     </>

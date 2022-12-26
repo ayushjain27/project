@@ -23,7 +23,7 @@ const Modal = () => {
                 <div className="d-flex flex-column">
                   <img className={styles.img} src="./images/Logo.png" alt="" />
                   <div className={`${styles.desc} d-flex flex-column justify-content-center`}>
-                    <h className={`${styles.name} d-flex align-items-center`}>Avak</h>
+                    <h className={`${styles.name} d-flex align-items-center `}>Avak</h>
                     <p>avakinternational@gmail.com</p>
                   </div>
                 </div>
@@ -34,7 +34,7 @@ const Modal = () => {
                     <div className="col-12">
                       <div className="row">
                         <div className={`${styles.col} col-2`}><i className="fa-solid fa-gift"></i></div>
-                        <div className={`${styles.col1} col-10`}>Your current Box</div>
+                        <div className={`${styles.col1} col-10 text-white`}>Your current Box</div>
                       </div>
                     </div>
                   </div>
@@ -42,7 +42,7 @@ const Modal = () => {
                     <div className="col-12">
                       <div className="row">
                         <div className={`${styles.col} col-2`}><i class="fa-solid fa-heart"></i></div>
-                        <div className={`${styles.col1} col-10`} onClick={DonationHistory}>Donation History</div>
+                        <div className={`${styles.col1} col-10 text-white`} onClick={DonationHistory}>Donation History</div>
                       </div>
                     </div>
                   </div>
@@ -50,7 +50,7 @@ const Modal = () => {
                     <div className="col-12">
                       <div className="row">
                         <div className={`${styles.col} col-2`}><i className="fa-solid fa-user"></i></div>
-                        <div className={`${styles.col1} col-10`}>Profile Settings</div>
+                        <div className={`${styles.col1} col-10 text-white`}>Profile Settings</div>
                       </div>
                     </div>
                   </div>
@@ -58,7 +58,7 @@ const Modal = () => {
                     <div className="col-12">
                       <div className="row">
                         <div className={`${styles.col} col-2`}><i className="fa-solid fa-circle-question"></i></div>
-                        <div className={`${styles.col1} col-10`}>Help</div>
+                        <div className={`${styles.col1} col-10 text-white`}>Help</div>
                       </div>
                     </div>
                   </div>
@@ -66,7 +66,7 @@ const Modal = () => {
                     <div className="col-12">
                       <div className="row">
                         <div className={`${styles.col} col-2`}><i className="fa-solid fa-circle-info"></i></div>
-                        <div className={`${styles.col1} col-10`}>About Us</div>
+                        <div className={`${styles.col1} col-10 text-white`}>About Us</div>
                       </div>
                     </div>
                   </div>

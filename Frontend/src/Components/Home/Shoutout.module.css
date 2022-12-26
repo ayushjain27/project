@@ -7,10 +7,15 @@
 }
 
 .box{
-    background-color: #0a0a0e;
+    background-color: rgba(33,33,33,1);
     padding: 12px;
     border-top-left-radius: 12px;
     border-bottom-right-radius: 12px;
     height: 100px;
     font-size: 1rem;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

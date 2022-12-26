@@ -11,7 +11,7 @@ const Navbar = () => {
         <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <div className={styles.logo}>LOGO</div>
+        <div className={styles.logo} onClick={()=>{navigate('/')}}>logo</div>
         <div>
           <button type="button" className="btn btn-danger mx-2" onClick={() => navigate('/login')}>
             Login
@@ -19,6 +19,7 @@ const Navbar = () => {
           <button type="button" className="btn btn-warning mx-2" onClick={() => navigate('/signup')}>
             SignUp
           </button>
+          {/* <button type='button' className='btn btn-warning ' onClick={()=>navigate('/')}> HOME</button> */}
         </div>
       </div>
       <Modal />

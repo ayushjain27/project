@@ -7,7 +7,7 @@
 }
 
 .box{
-    background-color: #0a0a0e;
+    background-color: rgba(33,33,33,1);
     padding: 6px 12px;
     font-weight: 600;
 }
@@ -28,4 +28,8 @@
     .box{
         font-size: 0.4rem;
     }    
+}
+.footcontain{
+    background-color: rgba(33,33,33,1);
+    color: rgb(255, 255, 255);
 }

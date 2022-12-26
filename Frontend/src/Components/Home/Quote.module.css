@@ -3,7 +3,8 @@
 }
 
 .style {
-  background-color: lightgray;
+  border-top: 1px solid white;
+  background-color: rgba(33,33,33,1);
   word-spacing: 12px;
 }
 

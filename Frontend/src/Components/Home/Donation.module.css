@@ -19,12 +19,17 @@
 }
 
 .sentence {
+  background-color: rgb(33, 33, 33);
+  padding: 20px;
+  border-radius: 10px;
   word-spacing: 2px;
   font-size: 20px;
 }
 
 .DonateBoxContainer {
-  background-color: lightyellow;
+  /* background-color: rgb(33, 33, 33);
+   */
+   background-image: linear-gradient(to right, rgb(33,33,33) , grey,rgb(33,33,33));
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
@@ -34,11 +39,23 @@
     border-top-right-radius: 12px;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 0px;
-    background-color: cornsilk; 
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 200px;
+    background-image: url('https://www.gannett-cdn.com/-mm-/3b8b0abcb585d9841e5193c3d072eed1e5ce62bc/c=0-30-580-356/local/-/media/2017/10/05/USATODAY/usatsports/glass-jar-full-of-cois-with-donate-written-on-it-charity-donation-philanthropy_large.jpg?width=1200&disable=upscale&format=pjpg&auto=webp');
+padding: 10px;
+background-blend-mode: darken;
     cursor: pointer;
-}
 
+}
+.card:hover{
+  box-shadow: 10px 10px 10px white;
+}
+.cards div{
+  margin-top: 80px;
+}
 .title{
-    background-color: #0a0a0e;;
+   background-color: rgba(0, 0, 0, 0.8);
     height: 50px;
 }

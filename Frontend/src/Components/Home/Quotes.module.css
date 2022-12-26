@@ -6,7 +6,9 @@
 }
 
 .containerFluid {
-  background-color: #0c1022;
+ 
+  /* background-color: #000000; */
+  background-color: rgba(33,33,33,1);
   display: flex;
   justify-content: center;
   align-items: center;
