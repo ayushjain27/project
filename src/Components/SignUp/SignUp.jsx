@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SignUp.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -8,8 +8,26 @@ import { IoIosLock } from "react-icons/io";
 
 import { Formik, Form, Field } from "formik";
 
-const SignUp = () => {
-    const navigate = useNavigate();
+const SignUp = (props) => {
+    const [username, setusername] = useState("")
+    const [email, setemail] = useState("")
+    const [password, setpassword] = useState("")
+    const navigate = useNavigate()
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const response = await fetch("http://localhost:5000/api/auth/createUser", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, email, password })
+        });
+
+        const json = await response.json()
+        localStorage.setItem('token', json.authtoken);
+        navigate('/');
+        console.log(json);
+    }
 
     const initialValues = {
         username: "",
@@ -22,6 +40,7 @@ const SignUp = () => {
         if (!value) {
             error = "*This field is required";
         }
+        setusername(value)
         return error;
     };
 
@@ -32,6 +51,7 @@ const SignUp = () => {
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
             error = "*Invalid email address";
         }
+        setemail(value)
         return error;
     };
 
@@ -42,6 +62,7 @@ const SignUp = () => {
         } else if (!/^[0-9a-zA-Z]{9,100}$/i.test(value)) {
             error = "*Invalid Password must be greater than 8";
         }
+        setpassword(value)
         return error;
     };
 
@@ -77,24 +98,24 @@ const SignUp = () => {
                                 // onSubmit={onSubmit}
                                 >
                                     {({ errors, touched }) => (
-                                        <Form className="mt-5">
+                                        <Form onSubmit={handleSubmit} className="mt-5">
                                             <div className="mb-3">
-                                            <Field
-                                                type="text"
-                                                className={`form-control ${errors.username && touched.username
+                                                <Field
+                                                    type="text"
+                                                    className={`form-control ${errors.username && touched.username
                                                         ? "border-danger"
                                                         : ""
-                                                    }`}
-                                                id="username"
-                                                name="username"
-                                                placeholder="Username"
-                                                validate={validateUserName}
-                                            />
-                                            {errors.username && touched.username && (
-                                                <div className="form-text text-danger">
-                                                    {errors.username}
-                                                </div>
-                                            )}
+                                                        }`}
+                                                    id="username"
+                                                    name="username"
+                                                    placeholder="Username"
+                                                    validate={validateUserName}
+                                                />
+                                                {errors.username && touched.username && (
+                                                    <div className="form-text text-danger">
+                                                        {errors.username}
+                                                    </div>
+                                                )}
                                             </div>
                                             <div className="mb-3">
                                                 <Field
@@ -116,8 +137,8 @@ const SignUp = () => {
                                                 <Field
                                                     type="password"
                                                     className={`form-control ${errors.password && touched.password
-                                                            ? "border-danger"
-                                                            : ""
+                                                        ? "border-danger"
+                                                        : ""
                                                         }`}
                                                     id="password"
                                                     name="password"

@@ -5,6 +5,12 @@ import Modal from '../Modal/Modal'
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const handleLogOut = (e) => {
+    e.preventDefault();
+        localStorage.removeItem('token')
+        navigate('/login');
+}
+
   return (
     <>
       <div className={`${styles.nav} d-flex align-items-center justify-content-between`}>
@@ -16,8 +22,8 @@ const Navbar = () => {
           <button type="button" className="btn btn-danger mx-2" onClick={() => navigate('/login')}>
             Login
           </button>
-          <button type="button" className="btn btn-warning mx-2" onClick={() => navigate('/signup')}>
-            SignUp
+          <button type="button" className="btn btn-warning mx-2" onClick={handleLogOut}>
+            LogOut
           </button>
           {/* <button type='button' className='btn btn-warning ' onClick={()=>navigate('/')}> HOME</button> */}
         </div>
