@@ -11,6 +11,7 @@ app.use(express.json());
 
 // Available Routes
 app.use('/api/auth', require('./routes/auth.js'))
+app.use('/api/ngo', require('./routes/ngo.js'))
 app.use('/api/details', require('./routes/details.js'))
 
 
