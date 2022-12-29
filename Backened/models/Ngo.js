@@ -15,6 +15,10 @@ const NgoSchema = new Schema({
         type: String,
         required: true
     },
+    registration:{
+        type: String,
+        required: true
+    },
     date:{
         type: Date,
         default: Date.now

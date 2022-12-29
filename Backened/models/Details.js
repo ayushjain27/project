@@ -14,10 +14,6 @@ const DetailsSchema = new Schema({
         type: String,
         required: true
     },
-    ngo_link:{
-        type: String,
-        required : true 
-    },
     image:{
         type: String,
         required : true 

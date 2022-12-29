@@ -21,14 +21,14 @@ router.post('/adddetail/clothes', fetchuser, [
     body('description', 'Description must be atleast 10 characters').isLength({ min: 10 }),
 ], async (req, res) => {
     try {
-        const { title, description, ngo_link, image } = req.body;
+        const { title, description, image } = req.body;
         // if there are errors, return Bad request and the errors
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
         const detail = new Detail({
-            title, description, ngo_link, image, user: req.user.id
+            title, description, image, category:'clothes', user: req.user.id
         })
         const savedDetail = await detail.save();
         res.json(savedDetail);
@@ -45,14 +45,14 @@ router.post('/adddetail/shoes', fetchuser, [
     body('description', 'Description must be atleast 10 characters').isLength({ min: 10 }),
 ], async (req, res) => {
     try {
-        const { title, description, ngo_link, image } = req.body;
+        const { title, description, image } = req.body;
         // if there are errors, return Bad request and the errors
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
         const detail = new Detail({
-            title, description, ngo_link, image, user: req.user.id
+            title, description, image, category:'shoes', user: req.user.id
         })
         const savedDetail = await detail.save();
         res.json(savedDetail);
