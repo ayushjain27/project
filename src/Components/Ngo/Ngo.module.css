@@ -1,0 +1,13 @@
+.carouselb{
+    border-top: 10px solid black;
+    border-bottom: 10px solid black ;
+    margin-top: 5px;
+}
+.headtable{
+    background-color: #ffc107;
+    text-align: center;
+}
+.tablec{
+    margin:10px;
+    border-radius: 20px;
+}

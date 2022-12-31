@@ -15,7 +15,7 @@ const SignUp = (props) => {
     const navigate = useNavigate()
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/auth/createUser", {
+        const response = await fetch("http://localhost:5000/api/auth/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -24,6 +24,7 @@ const SignUp = (props) => {
         });
 
         const json = await response.json()
+        console.log(json.authtoken)
         localStorage.setItem('token', json.authtoken);
         navigate('/');
         console.log(json);
@@ -95,7 +96,7 @@ const SignUp = (props) => {
                                 />
                                 <Formik
                                     initialValues={initialValues}
-                                // onSubmit={onSubmit}
+                                    onSubmit={handleSubmit}
                                 >
                                     {({ errors, touched }) => (
                                         <Form onSubmit={handleSubmit} className="mt-5">

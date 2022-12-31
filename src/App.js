@@ -9,6 +9,7 @@ import Images from './Components/Images/Images';
 import Items from './Components/Items/Items';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
+import Ngo from './Components/Ngo/Ngo';
 // import Dashboard from './Components/Dashboard/Dashboard';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route exact path='/itemsbox' element={<Items />} />
           <Route exact path='/Login' element={<Login />} />
           <Route exact path='/SignUp' element={<SignUp />} />
+          <Route exact path='/Ngo' element={<Ngo />} />
         </Routes>
       </Router>
     </>
