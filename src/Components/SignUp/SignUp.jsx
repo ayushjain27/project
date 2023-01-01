@@ -9,29 +9,36 @@ import { IoIosLock } from "react-icons/io";
 import { Formik, Form, Field } from "formik";
 
 const SignUp = (props) => {
-    const [username, setusername] = useState("")
+    const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
     const navigate = useNavigate()
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleSubmit = async () => {
+        // e.preventDefault();
+        // const {name, email, password} = credentials;
         const response = await fetch("http://localhost:5000/api/auth/createuser", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ username, email, password })
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, password })
         });
-
+    
         const json = await response.json()
-        console.log(json.authtoken)
+        console.log(json);
         localStorage.setItem('token', json.authtoken);
         navigate('/');
-        console.log(json);
-    }
-
+        // if(json.success){
+        //     // Save the auth token and redirect
+        //   props.showAlert("Account Created Successfully", "success")
+        // }
+        // else{
+        //   props.showAlert("Invalid Credential", "danger")
+        // }  
+      }
+    
     const initialValues = {
-        username: "",
+        name: "",
         email: "",
         password: "",
     };
@@ -41,7 +48,7 @@ const SignUp = (props) => {
         if (!value) {
             error = "*This field is required";
         }
-        setusername(value)
+        setname(value)
         return error;
     };
 
@@ -99,22 +106,22 @@ const SignUp = (props) => {
                                     onSubmit={handleSubmit}
                                 >
                                     {({ errors, touched }) => (
-                                        <Form onSubmit={handleSubmit} className="mt-5">
+                                        <Form className="mt-5">
                                             <div className="mb-3">
                                                 <Field
                                                     type="text"
-                                                    className={`form-control ${errors.username && touched.username
+                                                    className={`form-control ${errors.name && touched.name
                                                         ? "border-danger"
                                                         : ""
                                                         }`}
-                                                    id="username"
-                                                    name="username"
+                                                    id="name"
+                                                    name="name"
                                                     placeholder="Username"
                                                     validate={validateUserName}
                                                 />
-                                                {errors.username && touched.username && (
+                                                {errors.name && touched.name && (
                                                     <div className="form-text text-danger">
-                                                        {errors.username}
+                                                        {errors.name}
                                                     </div>
                                                 )}
                                             </div>

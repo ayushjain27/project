@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -7,7 +7,32 @@ import { CgLogIn } from "react-icons/cg";
 import { Formik, Form, Field } from "formik";
 
 const Login = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+    const [email, setemail] = useState("")
+    const [password, setpassword] = useState("")
+    const handleSubmit = async () => {
+        // e.preventDefault();
+        // const {name, email, password} = credentials;
+        const response = await fetch("http://localhost:5000/api/auth/createuser", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password })
+        });
+    
+        const json = await response.json()
+        console.log(json);
+        localStorage.setItem('token', json.authtoken);
+        navigate('/');
+        // if(json.success){
+        //     // Save the auth token and redirect
+        //   props.showAlert("Account Created Successfully", "success")
+        // }
+        // else{
+        //   props.showAlert("Invalid Credential", "danger")
+        // }  
+      }
 
   const validateEmail = (value) => {
     let error;
@@ -16,6 +41,7 @@ const Login = () => {
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
       error = "*Invalid email address";
     }
+    setemail(value)
     return error;
   };
 
@@ -26,6 +52,7 @@ const Login = () => {
     } else if (!/^[0-9a-zA-Z]{0,10}$/i.test(value)) {
       error = "*Invalid Password";
     }
+    setpassword(value)
     return error;
   };
 
@@ -56,9 +83,7 @@ const Login = () => {
                     email: "",
                     password: "",
                   }}
-                // onSubmit={(values) => {
-                //   console.log(values);
-                // }}
+                  onSubmit={handleSubmit}
                 >
                   {({ errors, touched }) => (
                     <Form>
