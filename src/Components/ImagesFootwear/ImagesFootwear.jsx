@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./Images.module.css";
+import styles from "./ImagesFootwear.module.css";
 // import * as React from 'react';
 // import Box from '@mui/material/Box';
 // import TextField from '@mui/material/TextField';
@@ -11,7 +11,7 @@ import styles from "./Images.module.css";
 
 import { Formik, Form, Field } from "formik";
 
-const Images = () => {
+const ImagesFootwear = () => {
   const initialValues = {
     title: "",
     description: "",
@@ -63,7 +63,7 @@ const Images = () => {
   const handleSubmit = async () => {
       // e.preventDefault();
       // const {name, email, password} = credentials;
-      const response = await fetch("http://localhost:5000/api/details/adddetail/clothes", {
+      const response = await fetch("http://localhost:5000/api/details/adddetail/shoes", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -344,7 +344,7 @@ const Images = () => {
   );
 };
 
-export default Images;
+export default ImagesFootwear;
 
 
 

@@ -7,6 +7,9 @@ const Donation = () => {
   const handleSubmit = () =>{
     navigate('/images')
   }
+  const handleSubmit_1 = () =>{
+    navigate('/imagesFootwear')
+  }
   return (
     <>
       <div className={`${styles.DonateContainer} d-flex justify-content-center align-items-center container-fluid`}>
@@ -14,7 +17,7 @@ const Donation = () => {
           YOU CAN DONATE OLD ITEMS IN THESE  CATEGORIES
         </div>
       </div>
-      <div onClick={handleSubmit} className={styles.DonateBoxContainer} container-fluid>
+      <div onClick={handleSubmit_1} className={styles.DonateBoxContainer} container-fluid>
         <div className={`${styles.row} row`}>
           <div  className={`${styles.col} col-6 col-md-3`}>
             <div className={`${styles.cards} card border-0`}>
