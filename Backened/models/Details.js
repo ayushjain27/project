@@ -14,10 +14,10 @@ const DetailsSchema = new Schema({
         type: String,
         required: true
     },
-    image:{
-        type: String,
-        required : true 
-    },
+    // uploadfile:{
+    //     type: String,
+    //     required : true 
+    // },
     category:{
         type: String,
     },

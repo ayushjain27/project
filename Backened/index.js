@@ -13,7 +13,7 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth.js'))
 app.use('/api/ngo', require('./routes/ngo.js'))
 app.use('/api/details', require('./routes/details.js'))
-
+app.use('/api/status', require('./routes/status.js'))
 
 app.listen(port, ()=>{
     console.log(`Example app listening at http://localhost:${port}`);
