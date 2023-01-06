@@ -86,16 +86,16 @@ router.post("/images", fetchuser, upload.single('image') , function(req,res) {
     res.json({success: true, data: uploadFile, user: req.user.id});
 })
 
-// ROUTE 1:  Get All the Details using: GET "/api/details". login required
-router.get('/getimage', fetchuser, async (req, res) => {
-    try {
-        const data = await Detail.find({ user: req.user.id });
-        res.json(details);
-    } catch (error) {
-        console.error(error.message);
-        res.status(500).send("Internal Server Error");
-    } 
-})
+// // ROUTE 5:  Get All the Details using: GET "/api/details". login required
+// router.get('/getimage', fetchuser, async (req, res) => {
+//     try {
+//         const data = await Detail.find({ user: req.user.id });
+//         res.json(details);
+//     } catch (error) {
+//         console.error(error.message);
+//         res.status(500).send("Internal Server Error");
+//     } 
+// })
 
 
 module.exports = router;
