@@ -17,7 +17,7 @@ router.get('/fetchalldetails', fetchuser, async (req, res) => {
 })
 
 // ROUTE 2:  Add a new Detail using: POST "/api/details/adddetail". login required
-router.post('/adddetail/clothes', fetchuser, upload.single('image'), [
+router.post('/adddetail/clothes', fetchuser, [
     body('title', 'Title must be atleast 5 characters').isLength({ min: 5 }),
     body('description', 'Description must be atleast 10 characters').isLength({ min: 10 }),
 ], async (req, res) => {
@@ -35,7 +35,7 @@ router.post('/adddetail/clothes', fetchuser, upload.single('image'), [
             return res.status(400).json({ errors: errors.array() });
         }
         const detail = new Detail({
-            title, description, uploadFile, category:'clothes', user: req.user.id
+            title, description, category:'clothes', user: req.user.id
         })
         const savedDetail = await detail.save();
         res.json(savedDetail);
@@ -47,7 +47,7 @@ router.post('/adddetail/clothes', fetchuser, upload.single('image'), [
 })
 
 // ROUTE 3:  Add a new Detail using: POST "/api/details/adddetail". login required
-router.post('/adddetail/shoes', fetchuser, upload.single('image'),[
+router.post('/adddetail/shoes', fetchuser, [
     body('title', 'Title must be atleast 5 characters').isLength({ min: 5 }),
     body('description', 'Description must be atleast 10 characters').isLength({ min: 10 }),
 ], async (req, res) => {
@@ -64,7 +64,7 @@ router.post('/adddetail/shoes', fetchuser, upload.single('image'),[
             return res.status(400).json({ errors: errors.array() });
         }
         const detail = new Detail({
-            title, description, uploadFile, category:'shoes', user: req.user.id
+            title, description, category:'shoes', user: req.user.id
         })
         const savedDetail = await detail.save();
         res.json(savedDetail);
@@ -74,5 +74,28 @@ router.post('/adddetail/shoes', fetchuser, upload.single('image'),[
         res.status(500).send("Internal Server Error");
     }
 })
+
+// ROUTE 4:  Add a new Detail using: POST "/api/details". login required
+router.post("/images", fetchuser, upload.single('image') , function(req,res) {
+    const uploadFile = req.file;
+    if(!uploadFile) {
+        res.json({success: false, error: "file-not-uploaded"});
+        return;
+    }
+
+    res.json({success: true, data: uploadFile, user: req.user.id});
+})
+
+// ROUTE 1:  Get All the Details using: GET "/api/details". login required
+router.get('/getimage', fetchuser, async (req, res) => {
+    try {
+        const data = await Detail.find({ user: req.user.id });
+        res.json(details);
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    } 
+})
+
 
 module.exports = router;
