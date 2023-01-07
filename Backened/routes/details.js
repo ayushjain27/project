@@ -25,13 +25,15 @@ router.post('/adddetail/clothes', fetchuser, [
     try {
         
         const { title, description } = req.body;
+        const data = await Image.find({ user: req.user.id });
+        // res.json(data)
         // if there are errors, return Bad request and the errors
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
         const detail = new Detail({
-            title, description, category:'clothes', user: req.user.id
+            title, description, image: data[2].uploadFile.filename, category:'clothes', user: req.user.id
         })
         const savedDetail = await detail.save();
         res.json(savedDetail);
