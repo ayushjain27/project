@@ -98,16 +98,15 @@ router.get('/getimage', fetchuser, async (req, res) => {
     } 
 })
 
-// // ROUTE 1:  Get All the Details using: GET "/api/details/getuser". login required
-// router.get('/fetchalldetail', async (req, res) => {
-//     try {
-//         const details = await Detail;
-//         res.json(details);
-//     } catch (error) {
-//         console.error(error.message);
-//         res.status(500).send("Internal Server Error");
-//     } 
-// })
-
+// ROUTE 6:  Get All the Details using: GET "/api/details/getuser". login required
+router.get('/fetchalldetail', async (req, res) => {
+    try {
+        const detail = await Detail.find();
+        res.json(detail);
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    } 
+})
 
 module.exports = router;
