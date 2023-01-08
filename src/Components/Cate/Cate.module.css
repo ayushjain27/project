@@ -1,3 +1,35 @@
+.contain{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: url('https://www.diggitmagazine.com/sites/default/files/styles/2_1_all/public/field/image/will-esayenko-1483615-unsplash.jpg?itok=u7P5cbcz&timestamp=1558690596');
+flex-wrap: wrap;
+}
+
 .card{
-    border:0px;
+    display: flex;
+    flex-direction: column;
+    border:2px solid black;
+    box-shadow: 10px 10px 10px rgb(54, 54, 54);
+    margin: 30px;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.carddetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(50, 49, 48);
+}
+.buttons{
+    background-color: #ffc107;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.buttons:hover{
+    background-color: white;
 }

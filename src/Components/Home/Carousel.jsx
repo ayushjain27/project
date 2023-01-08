@@ -37,22 +37,22 @@ export default class CenterMode extends Component {
         
         <Slider {...settings}>
           <div>
-            <img src="https://picsum.photos/300/300" alt="" />
+            <img src="https://th.bing.com/th/id/OIP.urA1OQAvQeHrnmTB7e_o3AHaE7?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" width={'400px'} height={'300px'} alt="" />
           </div>
           <div>
-          <img src="https://picsum.photos/300/300" alt="" />
+          <img height={'300px'} width={'400px'} src="https://th.bing.com/th/id/OIP.AQWbN0mvvCj_T-QNxndQAgHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" />
           </div>
           <div>
-          <img src="https://picsum.photos/300/300" alt="" />
+          <img height={'300px'} width={'400px'} src="https://th.bing.com/th/id/OIP.PyFNiTk-edap7LADnaw9IQHaEA?w=298&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" />
           </div>
           <div>
-          <img src="https://picsum.photos/300/300" alt="" />
+          <img height={'300px'} width={'400px'} src="https://th.bing.com/th/id/OIP.upVp_8A0fM4h63Ds_jE57AHaEL?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" />
           </div>
           <div>
-          <img src="https://picsum.photos/300/300" alt="" />
+          <img height={'300px'} width={'400px'} src="https://th.bing.com/th/id/OIP.A-_MbAsFQhWV_KdZ9xPUjAHaFH?w=249&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" />
           </div>
           <div>
-          <img src="https://picsum.photos/300/300" alt="" />
+          <img height={'300px'} width={'400px'} src="https://th.bing.com/th/id/OIP.gmJkbiAaJ89m-m5reZMZDwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" />
           </div>
         </Slider>
       </div>

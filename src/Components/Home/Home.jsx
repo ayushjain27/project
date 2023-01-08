@@ -8,14 +8,14 @@ import Testimaonials from "./Testimaonials";
 
 const Home = () => {
   return (
-    <>
+    <div >
      <div style={{width:'100%',backgroundColor:'black'}}> <Carousel /></div>
       <Quotes />
       <Donation />
       <Testimaonials />
       <Shoutout />
       <Footer />
-    </>
+    </div>
   );
 };
 
