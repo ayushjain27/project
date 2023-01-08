@@ -2,6 +2,23 @@ import React from "react";
 import styles from "./Items.module.css";
 
 const Items = () => {
+   // Get All Details
+   const host = "http://localhost:5000"
+   const [details, setDetails] = useState([])
+   const getDetails = async () => {
+    // TODO : API Call
+    const response = await fetch(`${host}/api/details/fetchalldetails`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'auth-token': localStorage.getItem('token')
+      },
+    });
+    
+    const json = await response.json()
+    console.log(json)
+    setDetails(json)
+  }
   return (
     <>
       <div className="container text-center">

@@ -1,0 +1,17 @@
+.img {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.cardHeader {
+    border-bottom: 2px solid #ffc107;
+}
+
+.forgotPassword:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767.5px) {
+    .right {
+        display: none;
+    }
+}

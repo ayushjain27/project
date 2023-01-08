@@ -19,7 +19,9 @@ const DetailsSchema = new Schema({
         type: String,
         required: true
     },
-    
+    category:{
+        type: String
+    },
     date:{
         type: Date,
         default: Date.now

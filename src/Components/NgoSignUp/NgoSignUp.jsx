@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SignUp.module.css";
+import styles from "./NgoSignUp.module.css";
 import { useNavigate } from "react-router-dom";
 
 import { IoIosLock } from "react-icons/io";
@@ -8,20 +8,21 @@ import { IoIosLock } from "react-icons/io";
 
 import { Formik, Form, Field } from "formik";
 
-const SignUp = (props) => {
+const NgoSignUp = (props) => {
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
+    const [register, setregister] = useState("")
     const navigate = useNavigate()
     const handleSubmit = async () => {
         // e.preventDefault();
         // const {name, email, password} = credentials;
-        const response = await fetch("http://localhost:5000/api/auth/createuser", {
+        const response = await fetch("http://localhost:5000/api/ngo/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, password })
+            body: JSON.stringify({ name, email, password, register })
         });
 
         const json = await response.json()
@@ -41,6 +42,7 @@ const SignUp = (props) => {
         name: "",
         email: "",
         password: "",
+        register: "",
     };
 
     const validateUserName = (value) => {
@@ -71,6 +73,15 @@ const SignUp = (props) => {
             error = "*Invalid Password must be greater than 8";
         }
         setpassword(value)
+        return error;
+    };
+
+    const validateRegister = (value) => {
+        let error;
+        if (!value) {
+            error = "*This field is Required";
+        }
+        setregister(value)
         return error;
     };
 
@@ -159,6 +170,24 @@ const SignUp = (props) => {
                                                     </div>
                                                 )}
                                             </div>
+                                            <div className="mb-3">
+                                                <Field
+                                                    type="text"
+                                                    className={`form-control ${errors.register && touched.register
+                                                        ? "border-danger"
+                                                        : ""
+                                                        }`}
+                                                    id="register"
+                                                    name="register"
+                                                    placeholder="Registration number"
+                                                    validate={validateRegister}
+                                                />
+                                                {errors.register && touched.register && (
+                                                    <div className="form-text text-danger">
+                                                        {errors.register}
+                                                    </div>
+                                                )}
+                                            </div>
                                             <div className="mb-3 d-grid col-4 mx-auto">
                                                 <button type="Submit" className="btn btn-dark">
                                                     <IoIosLock className="fs-4 me-1" />
@@ -187,4 +216,4 @@ const SignUp = (props) => {
     );
 };
 
-export default SignUp;
+export default NgoSignUp;

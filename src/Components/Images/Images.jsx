@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Images.module.css";
-// import * as React from 'react';
-// import Box from '@mui/material/Box';
-// import TextField from '@mui/material/TextField';
-// import InputLabel from '@mui/material/InputLabel';
-// import MenuItem from '@mui/material/MenuItem';
-// import FormControl from '@mui/material/FormControl';
-// import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 import { Formik, Form, Field } from "formik";
 
-const Images = () => {
+const Images = (props) => {
   const initialValues = {
     title: "",
     description: "",
@@ -39,25 +32,10 @@ const Images = () => {
     return error;
   }
 
-  // const validateNgolink = (value) => {
-  //   let error;
-  //   if (!value) {
-  //     error = "*This field is required"
-  //   } else if (value === "Select NGO...") {
-  //     error = "*Choose correct option"
-  //   }
-  //   return error;
-  // }
-
-  // const [text, setText] = useState("Select NGO...");
-  
   const [selectedImage, setSelectedImage] = useState(null);
   const [image, setimage] = useState(null);
-  // const [imag, setImag] = useState({ title: "", description: "", text: "" });
-
   const [title, settitle] = useState("")
   const [description, setdescription] = useState("")
-  // const [password, setpassword] = useState("")
   const navigate = useNavigate()
   // title, description, image,
   const handleSubmit = async () => {
@@ -74,14 +52,14 @@ const Images = () => {
   
       const json = await response.json()
       console.log(json);
-      navigate('/itemsbox');
-      // if(json.success){
-      //     // Save the auth token and redirect
-      //   props.showAlert("Account Created Successfully", "success")
-      // }
-      // else{
-      //   props.showAlert("Invalid Credential", "danger")
-      // }  
+      if(json.success){
+        // Save the auth token and redirect
+        props.showAlert("Account Created Successfully", "success")
+        navigate('/itemsbox');
+      }
+      else{
+        props.showAlert("Invalid Credential", "danger")
+      }  
     }
 
 

@@ -6,33 +6,33 @@ import { CgLogIn } from "react-icons/cg";
 
 import { Formik, Form, Field } from "formik";
 
-const Login = () => {
+const Login = (props) => {
   const navigate = useNavigate()
-    const [email, setemail] = useState("")
-    const [password, setpassword] = useState("")
-    const handleSubmit = async () => {
-        // e.preventDefault();
-        // const {name, email, password} = credentials;
-        const response = await fetch("http://localhost:5000/api/auth/createuser", {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, password })
-        });
-    
-        const json = await response.json()
-        console.log(json);
-        localStorage.setItem('token', json.authtoken);
-        navigate('/');
-        // if(json.success){
-        //     // Save the auth token and redirect
-        //   props.showAlert("Account Created Successfully", "success")
-        // }
-        // else{
-        //   props.showAlert("Invalid Credential", "danger")
-        // }  
-      }
+  const [email, setemail] = useState("")
+  const [password, setpassword] = useState("")
+  const handleSubmit = async () => {
+    // e.preventDefault();
+    // const {name, email, password} = credentials;
+    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    const json = await response.json()
+    console.log(json);
+    if (json.success) {
+      // Save the auth token and redirect
+      props.showAlert("Account Created Successfully", "success")
+      localStorage.setItem('token', json.authtoken);
+      navigate('/');
+    }
+    else {
+      props.showAlert("Invalid Credential", "danger")
+    }
+  }
 
   const validateEmail = (value) => {
     let error;

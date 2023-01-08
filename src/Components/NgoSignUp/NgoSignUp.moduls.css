@@ -1,0 +1,9 @@
+.img {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+@media (max-width: 767.5px) {
+    .left {
+        display: none !important;
+    }
+}
