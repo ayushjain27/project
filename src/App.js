@@ -32,7 +32,7 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <Alert alert={alert} />
+        <Alert alert={alert} style={{backgroundColor:'black'}}/>
         <Quote />
         <Routes>
           {/* <Route exact path='/' element={<Dashboard />} /> */}

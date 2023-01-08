@@ -4,6 +4,7 @@
     align-items: center;
     background: url('https://www.diggitmagazine.com/sites/default/files/styles/2_1_all/public/field/image/will-esayenko-1483615-unsplash.jpg?itok=u7P5cbcz&timestamp=1558690596');
 flex-wrap: wrap;
+height: 100vh;
 }
 
 .card{
