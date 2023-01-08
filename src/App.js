@@ -3,7 +3,7 @@ import React, { useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import Navbar from './Components/Navbar/Navbar';
-import Alert from './Components/Alert/Alert';
+// import Alert from './Components/Alert/Alert';
 // import Quote from './Components/Home/Quote';
 import Home from './Components/Home/Home';
 import Images from './Components/Images/Images';
@@ -32,7 +32,7 @@ function App() {
     <>
       <Router>
         {/* <Navbar /> */}
-        <Alert alert={alert} style={{backgroundColor:'black'}}/>
+        {/* <Alert alert={alert} style={{backgroundColor:'black'}}/> */}
         {/* <Quote /> */}
         <Routes>
           {/* <Route exact path='/' element={<Dashboard />} /> */}

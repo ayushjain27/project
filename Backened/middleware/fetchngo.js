@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = 'Donationsforhelpingp$eople';
 
-const fetchuser = (req, res, next) => {
+const fetchngo = (req, res, next) => {
     // Get the user from the jwt token and add id to req object
     const token = req.header('auth-token');
     if(!token){
@@ -16,4 +16,4 @@ const fetchuser = (req, res, next) => {
     }
 }
 
-module.exports = fetchuser;
+module.exports = fetchngo;

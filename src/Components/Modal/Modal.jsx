@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from "react";
+import React from "react";
 import styles from "./Modal.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -7,34 +7,6 @@ const Modal = () => {
   const DonationHistory = () => {
     navigate('/itemsbox')
   }
-  // Get All Details
-  const host = "http://localhost:5000"
-  const [details, setDetails] = useState([])
-  const getDetails = async () => {
-    // TODO : API Call
-    const response = await fetch(`${host}/api/auth/getuser`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'auth-token': localStorage.getItem('token')
-      },
-    });
-
-    const json = await response.json()
-    console.log(json)
-    setDetails(json)
-  }
-
-  useEffect(() => {
-    if (localStorage.getItem('token')) {
-      getDetails()
-    }
-    else {
-      // redirect
-      navigate("/login")
-    }
-  }, [])
-
   return (
     <>
       <div>
@@ -49,30 +21,12 @@ const Modal = () => {
             <div className={`${styles.modal} modal-content text-white`}>
               <div className={`${styles.modalHeader} modal-header`}>
                 <div className="d-flex flex-column">
-                  {/* <img className={styles.img} src="./images/Logo.png" alt="" /> */}
-                  {details == null && (
-                    <>
+                  <img className={styles.img} src="./images/Logo.png" alt="" />
                   <div className={`${styles.desc} d-flex flex-column justify-content-center`}>
                     <h className={`${styles.name} d-flex align-items-center `}>Avak</h>
                     <p>avakinternational@gmail.com</p>
                   </div>
-                  </>
-                )}
                 </div>
-                {details != null && (
-                  <>
-                  {details.map((item) => {
-                    return (
-                      <>
-                        <div className={`${styles.desc} d-flex flex-column justify-content-center`}>
-                          {/* <h className={`${styles.name} d-flex align-items-center `}>{item.name===null ? "Ayush" : `${item.name}`}</h> */}
-                          <p>"item.email"</p>
-                        </div>
-                      </>
-                      )
-                    })}
-                      </>
-                    )}
               </div>
               <div className="modal-body">
                 <div className={`${styles.container} container`}>

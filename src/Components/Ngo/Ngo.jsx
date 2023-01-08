@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import NgoNavbar from '../NgoNavbar/NgoNavbar'
 import Carousel from '../Home/Carousel'
 import styles from './Ngo.module.css'
 import Footer from '../Home/Footer'
@@ -35,6 +36,7 @@ const Ngo = () => {
 
   return (
     <div>
+      <NgoNavbar />
       <div className={`${styles.carouselb}`}>
         <Carousel />
       </div>
