@@ -27,8 +27,8 @@ router.post('/addstatus/', [
             return res.status(400).json({ errors: errors.array() });
         }
         const acc = new Accept({
-            // status, ngo: req.ngo.id
-            status
+            status, ngo: req.ngo.id, user: req.user.id
+            // status
         })
         const savedDetail = await acc.save();
         res.json(savedDetail);
