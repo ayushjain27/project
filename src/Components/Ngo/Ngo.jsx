@@ -48,9 +48,8 @@ const Ngo = () => {
                     <th scope="col"></th>
                     <th scope="col">sno</th>
                     <th scope="col">title</th>
+                    <th scope="col" colSpan='2'></th>
                     <th scope="col" colSpan='2'>item description</th>
-                    <th scope="col"></th>
-
                   </tr>
                 </thead>
         {details.map((item) => {
@@ -62,7 +61,6 @@ const Ngo = () => {
                     <th scope="row">1</th>
                     <td colSpan='2'>{item.title}</td>
                     <td colSpan='2'>{item.description}</td>
-                    <td>4</td>
                     <td>
                       <button type="button" class="btn btn-success" style={{ marginLeft: '5px' }}>Accept</button><span>-</span>
                       <button type="button" class="btn btn-danger">Reject</button>
