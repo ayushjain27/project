@@ -2,9 +2,9 @@ import './App.css';
 import React, { useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from './Components/Navbar/Navbar';
+// import Navbar from './Components/Navbar/Navbar';
 import Alert from './Components/Alert/Alert';
-import Quote from './Components/Home/Quote';
+// import Quote from './Components/Home/Quote';
 import Home from './Components/Home/Home';
 import Images from './Components/Images/Images';
 import ImagesFootwear from './Components/ImagesFootwear/ImagesFootwear';
@@ -31,8 +31,9 @@ function App() {
   return (
     <>
       <Router>
+        {/* <Navbar /> */}
         <Alert alert={alert} style={{backgroundColor:'black'}}/>
-        <Quote />
+        {/* <Quote /> */}
         <Routes>
           {/* <Route exact path='/' element={<Dashboard />} /> */}
           <Route exact path='/' element={<Home />} />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState , useEffect } from "react";
 import styles from "./Modal.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -50,17 +50,29 @@ const Modal = () => {
               <div className={`${styles.modalHeader} modal-header`}>
                 <div className="d-flex flex-column">
                   {/* <img className={styles.img} src="./images/Logo.png" alt="" /> */}
+                  {details == null && (
+                    <>
+                  <div className={`${styles.desc} d-flex flex-column justify-content-center`}>
+                    <h className={`${styles.name} d-flex align-items-center `}>Avak</h>
+                    <p>avakinternational@gmail.com</p>
+                  </div>
+                  </>
+                )}
+                </div>
+                {details != null && (
+                  <>
                   {details.map((item) => {
                     return (
                       <>
                         <div className={`${styles.desc} d-flex flex-column justify-content-center`}>
-                          <h className={`${styles.name} d-flex align-items-center `}>{item.name}</h>
-                          <p>{item.email}</p>
+                          {/* <h className={`${styles.name} d-flex align-items-center `}>{item.name===null ? "Ayush" : `${item.name}`}</h> */}
+                          <p>"item.email"</p>
                         </div>
                       </>
-                    )
-                  })}
-                </div>
+                      )
+                    })}
+                      </>
+                    )}
               </div>
               <div className="modal-body">
                 <div className={`${styles.container} container`}>
