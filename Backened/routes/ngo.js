@@ -4,7 +4,7 @@ const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
-const fetchuser = require('../middleware/fetchuser')
+const fetchngo = require('../middleware/fetchngo')
 
 const JWT_SECRET = 'Donationsforhelpingp$eople';
 
@@ -94,8 +94,8 @@ router.post('/login', [
     }
 })
 
-// ROUTE3: Get loggedin User using: POST "/api/ngo/getuser". Login required
-router.get('/getuser', fetchuser ,async (req,res)=>{
+// ROUTE3: Get loggedin User using: POST "/api/ngo/getngo". Login required
+router.get('/getngo', fetchngo ,async (req,res)=>{
     try{
         ngoId = req.ngo.id;
         const ngo = await Ngo.findById(ngoId).select("-password");

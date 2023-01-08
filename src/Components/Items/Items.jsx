@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Navbar from '../Navbar/Navbar';
 import styles from "./Items.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -34,6 +35,7 @@ const Items = () => {
 
   return (
     <>
+    <Navbar />
       <div className="container text-center">
         <div className="mt-2 mb-2 fs-2 fw-bold">Your Items</div>
         {details.map((item) => {

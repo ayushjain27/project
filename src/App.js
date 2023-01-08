@@ -31,7 +31,6 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
         <Alert alert={alert} style={{backgroundColor:'black'}}/>
         <Quote />
         <Routes>

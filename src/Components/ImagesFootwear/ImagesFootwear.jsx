@@ -1,3 +1,4 @@
+import Navbar from "../Navbar/Navbar";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ImagesFootwear.module.css";
@@ -101,6 +102,7 @@ const ImagesFootwear = () => {
 
   return (
     <>
+    <Navbar />
       <div className={`${styles.container} container my-3 rounded`}>
         <div className="row">
           <div className={`${styles.col1} col-md-6`}>
