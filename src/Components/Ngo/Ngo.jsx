@@ -46,9 +46,9 @@ const Ngo = () => {
                 <thead>
                   <tr className='table-dark'>
                     <th scope="col"></th>
-                    <th scope="col">image</th>
+                    <th scope="col">sno</th>
+                    <th scope="col">title</th>
                     <th scope="col" colSpan='2'>item description</th>
-                    <th scope="col">quantity</th>
                     <th scope="col"></th>
 
                   </tr>
@@ -60,6 +60,7 @@ const Ngo = () => {
                   <tr>
                     <th scope="row"></th>
                     <th scope="row">1</th>
+                    <td colSpan='2'>{item.title}</td>
                     <td colSpan='2'>{item.description}</td>
                     <td>4</td>
                     <td>
