@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './Navbar.module.css'
+import styles from './NgoNavbar.module.css'
 import Modal from '../Modal/Modal'
 
 const NgoNavbar = () => {
