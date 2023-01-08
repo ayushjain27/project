@@ -54,8 +54,32 @@ const Images = (props) => {
       console.log(json);
       if(json.success){
         // Save the auth token and redirect
-        props.showAlert("Account Created Successfully", "success")
+        props.showAlert("Items Added Successfully", "success")
         navigate('/itemsbox');
+      }
+      else{
+        props.showAlert("Invalid Credential", "danger")
+      }  
+    }
+
+  const handleImage = async () => {
+      // e.preventDefault();
+      // const {name, email, password} = credentials;
+      const response = await fetch("http://localhost:5000/api/details/images", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'auth-token': localStorage.getItem('token')
+        },
+        body: JSON.stringify({ image })
+      });
+  
+      const json = await response.json()
+      console.log(json);
+      if(json.success){
+        // Save the auth token and redirect
+        props.showAlert("Image Added Successfully", "success")
+        // navigate('/itemsbox');
       }
       else{
         props.showAlert("Invalid Credential", "danger")
@@ -114,6 +138,7 @@ const Images = (props) => {
               >
                 UPLOAD FROM GALLERY
               </label>
+              <button onClick={handleImage} className="btn btn-dark button">Submit and Continue</button>
             </div>
           </div>
           <div className={`${styles.col2} col-md-6`}>
