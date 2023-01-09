@@ -17,7 +17,7 @@ const Navbar = () => {
         <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <div className={styles.logo} onClick={()=>{navigate('/')}}>donate</div>
+        <div className={styles.logo} onClick={()=>{navigate('/')}}>DONATE FOR A CHANGE </div>
         {/* <div className={styles.logo} onClick={()=>{navigate('/cate')}}>cate</div> */}
         <div>
           <button type="button" className="btn btn-danger mx-2" onClick={() => navigate('/cate')}>

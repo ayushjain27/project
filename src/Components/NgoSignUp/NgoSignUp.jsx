@@ -12,7 +12,7 @@ const NgoSignUp = (props) => {
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
-    const [register, setregister] = useState("")
+    const [registration, setregistration] = useState("")
     const navigate = useNavigate()
     const handleSubmit = async () => {
         // e.preventDefault();
@@ -22,7 +22,7 @@ const NgoSignUp = (props) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, password, register })
+            body: JSON.stringify({ name, email, password, registration })
         });
 
         const json = await response.json()
@@ -42,7 +42,7 @@ const NgoSignUp = (props) => {
         name: "",
         email: "",
         password: "",
-        register: "",
+        registration: "",
     };
 
     const validateUserName = (value) => {
@@ -81,7 +81,7 @@ const NgoSignUp = (props) => {
         if (!value) {
             error = "*This field is Required";
         }
-        setregister(value)
+        setregistration(value)
         return error;
     };
 
@@ -101,7 +101,7 @@ const NgoSignUp = (props) => {
                     <div className="col-md-6 m-auto">
                         <div className="card border-dark">
                             <div className="card-body">
-                                <h3 className="text-dark">Sign Up</h3>
+                                <h3 className="text-dark">Ngo Sign Up</h3>
                                 <p className="text-muted">
                                     Please fill in this form to create an account!
                                 </p>
@@ -177,14 +177,14 @@ const NgoSignUp = (props) => {
                                                         ? "border-danger"
                                                         : ""
                                                         }`}
-                                                    id="register"
-                                                    name="register"
+                                                    id="registration"
+                                                    name="registration"
                                                     placeholder="Registration number"
                                                     validate={validateRegister}
                                                 />
-                                                {errors.register && touched.register && (
+                                                {errors.registration && touched.registration && (
                                                     <div className="form-text text-danger">
-                                                        {errors.register}
+                                                        {errors.registration}
                                                     </div>
                                                 )}
                                             </div>
@@ -197,7 +197,7 @@ const NgoSignUp = (props) => {
                                             <p className={`${styles.new} text-center`}>
                                                 Already have an account ?{" "}
                                                 <span
-                                                    onClick={() => navigate("/login")}
+                                                    onClick={() => navigate("/NgoLogin")}
                                                     className="ms-1 text-dark fw-bold text-decoration-underline"
                                                     style={{ cursor: "pointer" }}
                                                 >

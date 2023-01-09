@@ -1,14 +1,14 @@
 .test{
     /* border: 2px solid black ; */
     border-radius: 10px;
-    box-shadow: 10px 20px 20px rgb(85, 85, 85);
+    box-shadow: 10px 20px 20px rgb(0, 0, 0);
     border: 1px solid grey;
     background-color: rgb(200, 200, 200);
     /* color: white; */
 }
 .test:hover{
     transition: scale(2);
-    box-shadow: 10px 25px 25px rgb(85, 85, 85);
+    box-shadow: 10px 25px 25px rgb(0, 0, 0);
 
 }
 .divider{

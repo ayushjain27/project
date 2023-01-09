@@ -63,7 +63,7 @@ const NgoLogin = (props) => {
                     <div className="col-md-6 m-auto">
                         <div className="card border-dark h-100">
                             <div className="card-body">
-                                <h3 className="text-dark">Login</h3>
+                                <h3 className="text-dark">Ngo Login</h3>
                                 <hr
                                     style={{
                                         color: "#000",
@@ -126,7 +126,7 @@ const NgoLogin = (props) => {
                                             <p className="text-center">
                                                 New User ?{" "}
                                                 <span
-                                                    onClick={() => navigate("/signup")}
+                                                    onClick={() => navigate("/NgoSignUp")}
                                                     className="ms-1 text-dark fw-bold text-decoration-underline"
                                                     style={{ cursor: "pointer" }}
                                                 >

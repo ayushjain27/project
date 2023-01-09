@@ -13,7 +13,7 @@ router.post('/createuser', [
     body('name', 'Name must be atleast 5 characters').isLength({ min: 5 }),
     body('email', 'Enter a valid email').isEmail(),
     body('password', 'Password must be atleast 5 characters').exists(),
-    body('registration', 'Registration number is required').exists(),
+    body('registration', 'Registration number is required').isLength({ min: 5 }),
 ], async (req, res) => {
     let success = false;
     // if there are errors, return Bad request and the errors
