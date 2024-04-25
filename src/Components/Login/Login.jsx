@@ -68,10 +68,10 @@ const Login = (props) => {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container mt-5" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', height: '80vh'}}>
         <div className="row">
-          <div className="col-md-12 m-auto d-flex justify-content-center align-items-center">
-            <div className="card border-dark h-100 w-50">
+          <div className="col-md-12 m-auto d-flex justify-content-center align-items-center rounded-top">
+            <div className="card border-dark h-100 w-50"  style={{borderRadius: 50, padding: 20}}>
               <div className="card-body">
                 <h3 className="text-dark d-flex justify-content-center align-items-center">Login</h3>
                 <hr
@@ -102,6 +102,7 @@ const Login = (props) => {
                           name="email"
                           placeholder="Email"
                           validate={validateEmail}
+                          style={{borderRadius: 20, padding: 10}}
                         />
                         {errors.email && touched.email && <div className="form-text text-danger">{errors.email}</div>}
                       </div>
@@ -113,6 +114,7 @@ const Login = (props) => {
                           name="password"
                           placeholder="Password"
                           validate={validatePassword}
+                          style={{borderRadius: 20, padding: 10}}
                         />
                         {errors.password && touched.password && <div className="form-text text-danger">{errors.password}</div>}
                       </div>
@@ -143,8 +145,17 @@ const Login = (props) => {
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-center align-items-center mt-5">
-        <button type="button" className="btn btn-success" onClick={() => navigate("/NgoLogin")}>Continue to Ngo Login <CgLogIn className="me-1" /></button>
+        <div className="d-flex justify-content-center align-items-center mt-3">
+        {/* <button type="button" onClick={() => navigate("/NgoLogin")}>Continue to Ngo Login <CgLogIn className="me-1" /></button> */}
+        
+        Are you an NGO ???
+        <div onClick={() => navigate("/NgoLogin")}   style={{
+            color: "blue", 
+            cursor: "pointer",
+            textDecoration: "underline",
+            transition: "color 0.3s",
+            marginLeft: 10
+          }}> Login as NGO</div>
         </div>
       </div>
     </>

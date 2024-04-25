@@ -17,7 +17,7 @@ const Home = () => {
       <Quotes />
       <Donation />
       <Testimaonials />
-      <Shoutout />
+      {/* <Shoutout /> */}
       <Footer />
     </div>
   );

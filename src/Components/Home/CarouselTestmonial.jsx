@@ -15,14 +15,14 @@ export default class CenterMode extends Component {
     // };
     const settings = {
         infinite: true,
-        dots: false,
+        dots: true,
         centerMode: true,
-        slidesToShow: 3,
+        slidesToShow: 4.2,
         slidesToScroll: 1,
         lazyLoad: true,
         autoplay: true,
       autoplaySpeed: 2000}
-    // const settings = { 
+    // const settings = {
     //     dots: true,
     //     infinite: false,
     //     speed: 500,

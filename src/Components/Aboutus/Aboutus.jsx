@@ -167,7 +167,7 @@ const Aboutus = () => {
     setLength(json.length);
     console.log(length);
     // console.log(json[0].email);
-    const BASE_URL = `mailto:${json[0].email}`;
+    const BASE_URL = `mailto:${json[0]?.email}`;
     console.log(BASE_URL);
   }
 
@@ -219,15 +219,15 @@ const Aboutus = () => {
                         <label className="form-label fw-bold">Enter Email*</label>
                         <Field
                           type="text"
-                          className={`form-control ${errors.email && touched.email ? "border-danger" : ""}`}
+                          className={`form-control ${errors?.email && touched?.email ? "border-danger" : ""}`}
                           placeholder='Enter Email'
                           id="email"
                           name="email"
                           validate={validateEmail}
                         />
-                        {errors.email && touched.email &&
+                        {errors?.email && touched?.email &&
                           <div className='form-text text-danger'>
-                            {errors.email}
+                            {errors?.email}
                           </div>
                         }
                       </div>
@@ -359,7 +359,7 @@ const Aboutus = () => {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-12">
+                    <div className="col-12" style={{display: 'flex', flexDirection: 'row-reverse'}}>
                       <div className="my-2">
                         <div className="d-grid ms-auto">
                           <button type="submit" className="btn btn-dark button">Submit and Continue</button>

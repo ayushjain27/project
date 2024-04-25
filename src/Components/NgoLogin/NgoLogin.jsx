@@ -68,10 +68,10 @@ const NgoLogin = (props) => {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container mt-5" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', height: '80vh'}}>
         <div className="row">
           <div className="col-md-6 m-auto">
-            <div className="card border-dark h-100">
+          <div className="card border-dark h-100"  style={{borderRadius: 50, padding: 20}}>
               <div className="card-body">
                 <h3 className="text-dark text-center">Ngo Login</h3>
                 <hr
@@ -104,6 +104,7 @@ const NgoLogin = (props) => {
                           name="email"
                           placeholder="Email"
                           validate={validateEmail}
+                          style={{borderRadius: 20, padding: 10}}
                         />
                         {errors.email && touched.email && (
                           <div className="form-text text-danger">
@@ -123,6 +124,7 @@ const NgoLogin = (props) => {
                           name="password"
                           placeholder="Password"
                           validate={validatePassword}
+                          style={{borderRadius: 20, padding: 10}}
                         />
                         {errors.password && touched.password && (
                           <div className="form-text text-danger">
@@ -159,8 +161,20 @@ const NgoLogin = (props) => {
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-center align-items-center mt-5">
+        {/* <div className="d-flex justify-content-center align-items-center mt-5">
         <button type="button" className="btn btn-success" onClick={() => navigate("/")}>Continue to User Login <CgLogIn className="me-1" /></button>
+        </div> */}
+        <div className="d-flex justify-content-center align-items-center mt-3">
+        {/* <button type="button" onClick={() => navigate("/NgoLogin")}>Continue to Ngo Login <CgLogIn className="me-1" /></button> */}
+        
+        Do you want to Donate ???
+        <div onClick={() => navigate("/")}   style={{
+            color: "blue", 
+            cursor: "pointer",
+            textDecoration: "underline",
+            transition: "color 0.3s",
+            marginLeft: 10
+          }}> Login as User</div>
         </div>
       </div>
     </>

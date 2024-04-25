@@ -71,7 +71,7 @@ const Ngo = () => {
       </div>
       <div className={styles.tablec}>
         <div className={styles.headtable}>
-          <h2>Pending request</h2>
+          <h2>Pending Request</h2>
         </div>
               <table class="table table-striped">
                 <thead>
@@ -106,15 +106,15 @@ const Ngo = () => {
       </div>
       <div className={styles.tablec}>
         <div className={styles.headtable}>
-          <h2>list of items to be donated</h2>
+          <h2>List of Items to be Donated</h2>
         </div>
         <table class="table table-striped">
           <thead>
             <tr className='table-dark'>
               <th scope="col"></th>
-              <th scope="col">sno</th>
-              <th scope="col" colSpan='2'>item description</th>
-              <th scope="col">quantity</th>
+              <th scope="col">Sno</th>
+              <th scope="col" colSpan='2'>Item Description</th>
+              <th scope="col">Quantity</th>
               <th scope="col"></th>
 
             </tr>
@@ -126,7 +126,7 @@ const Ngo = () => {
               <td colSpan='2'>shirt</td>
               <td>4</td>
               <td>
-                <button type="button" class="btn btn-success" style={{ marginLeft: '5px' }}>donation-done</button>
+                <button type="button" class="btn btn-success" style={{ marginLeft: '5px' }}>Donation-done</button>
               </td>
             </tr>
             <tr>
@@ -135,14 +135,14 @@ const Ngo = () => {
               <th scope="row">2</th>
               <td colSpan='2'>jeans</td>
               <td>3</td>
-              <td><button type="button" class="btn btn-success" style={{ marginLeft: '5px' }}>donation-done</button></td>
+              <td><button type="button" class="btn btn-success" style={{ marginLeft: '5px' }}>Donation-done</button></td>
             </tr>
             <tr>
               <th scope="row"></th>
               <th scope="row">3</th>
               <td colspan="2">t-shirt</td>
               <td>2</td>
-              <td><button type="button" class="btn btn-success" style={{ marginLeft: '5px' }}>donation-done</button></td>
+              <td><button type="button" class="btn btn-success" style={{ marginLeft: '5px' }}>Donation-done</button></td>
             </tr>
           </tbody>
         </table>

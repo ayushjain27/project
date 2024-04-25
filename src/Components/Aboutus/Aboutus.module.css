@@ -1,22 +1,27 @@
 .text {
-    background: linear-gradient(to right, #f32170,
-            #ff6b08, #cf23cf, #eedd44);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .text_1 {
-        background: linear-gradient(to right, lightgreen,
-                yellow, green, darkgreen);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        width: 150px;
-    }
+  background: linear-gradient(to right, lightgreen, yellow, green, darkgreen);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  width: 150px;
+}
 
-.insta{
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+.insta {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   /* -webkit-background-clip: text; */
-          /* Also define standard property for compatibility */
-          /* background-clip: text; */
+  /* Also define standard property for compatibility */
+  /* background-clip: text; */
   -webkit-text-fill-color: transparent;
 }

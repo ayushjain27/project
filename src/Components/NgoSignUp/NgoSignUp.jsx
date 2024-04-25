@@ -102,10 +102,10 @@ const NgoSignUp = (props) => {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container mt-5" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', height: '80vh'}}>
         <div className="row">
           <div className="col-md-6 m-auto">
-            <div className="card border-dark">
+          <div className="card border-dark"  style={{borderRadius: 50, padding: 20}}>
               <div className="card-body">
                 <h3 className="text-dark text-center">Ngo Sign Up</h3>
                 <p className="text-muted text-center">
@@ -131,6 +131,7 @@ const NgoSignUp = (props) => {
                           name="name"
                           placeholder="Username"
                           validate={validateUserName}
+                          style={{borderRadius: 20, padding: 10}}
                         />
                         {errors.name && touched.name && (
                           <div className="form-text text-danger">
@@ -148,6 +149,7 @@ const NgoSignUp = (props) => {
                           name="email"
                           placeholder="Email"
                           validate={validateEmail}
+                          style={{borderRadius: 20, padding: 10}}
                         />
                         {errors.email && touched.email && (
                           <div className="form-text text-danger">
@@ -167,6 +169,7 @@ const NgoSignUp = (props) => {
                           name="password"
                           placeholder="Password"
                           validate={validatePassword}
+                          style={{borderRadius: 20, padding: 10}}
                         />
                         {errors.password && touched.password && (
                           <div className="form-text text-danger">
@@ -186,6 +189,7 @@ const NgoSignUp = (props) => {
                           name="registration"
                           placeholder="Registration number"
                           validate={validateRegister}
+                          style={{borderRadius: 20, padding: 10}}
                         />
                         {errors.registration && touched.registration && (
                           <div className="form-text text-danger">
